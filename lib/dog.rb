@@ -3,6 +3,10 @@ class Dog
   attr_reader :name
   @@all = []
   
+  def self.save
+    @@all << self
+  end
+  
   def initialize(name)
     @@all << self
     @name = name
@@ -19,9 +23,6 @@ class Dog
     end
   end
   
-  def self.save
-    @@all << self
-  end
   
   def clear_all
     @@all.clear
